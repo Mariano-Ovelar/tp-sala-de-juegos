@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tpsaladejuegos-1b9d1": {
+      "hosting": {
+        "salaDeJuegos": [
+          "tpsaladejuegos-1b9d1"
+        ]
+      }
+    }
+  }
+}
