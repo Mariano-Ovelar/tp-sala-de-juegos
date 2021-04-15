@@ -17,6 +17,7 @@ import { environment } from 'src/environments/environment';
 import { NavbarComponent } from './component/navbar/navbar.component';
 
 import { AngularFireDatabaseModule }  from '@angular/fire/database';
+import { ChatComponent } from './component/chat/chat.component';
 
 
 
@@ -29,7 +30,8 @@ import { AngularFireDatabaseModule }  from '@angular/fire/database';
     PageNotFoundComponent,
     LoginComponent,
     RegistroComponent,
-    NavbarComponent
+    NavbarComponent,
+    ChatComponent
     
   ],
   imports: [

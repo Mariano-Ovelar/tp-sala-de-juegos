@@ -1,0 +1,32 @@
+<!-- <div>
+    <div>
+        <input type="text" [(ngModel)]="mensaje" id="inputMensaje" class="form-control" required autofocus>
+        <button>Enviar</button>
+    </div>
+
+</div> -->
+
+<div class="form-signin container" *ngIf="user$ | async as user">
+
+
+    <div class="form-label-group">
+
+    </div>
+
+
+
+</div>
+
+<div class="form-signin container" *ngIf="user$ | async as user">
+    
+    <div class="row justify-content-between">
+        <div class="col-md col-lg-7 align-self-center">
+            <input type="text" [(ngModel)]="mensaje" id="inputMensaje" class="form-control" required autofocus>
+
+        </div>
+
+        <div class="col-sm col-md col-lg align-self-center idChat">
+            <button>Enviar</button>
+        </div>
+    </div>
+</div>

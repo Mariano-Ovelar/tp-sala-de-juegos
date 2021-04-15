@@ -1,6 +1,16 @@
-<ul>
-    <li><a href="">Ta-te-ti</a></li>
-    <li><a href="">Piedra papel tijera</a></li>
-    <li><a href="">Memotest</a></li>
-    <li><a href="">Proximamente</a></li>
-</ul>
+<div class="container">
+    <div class="row justify-content-between">
+        <div class="col-md-2 col-lg-5 align-self-center">
+            <ul>
+                <li><a href="">Ta-te-ti</a></li>
+                <li><a href="">Piedra papel tijera</a></li>
+                <li><a href="">Memotest</a></li>
+                <li><a href="">Proximamente</a></li>
+            </ul>
+        </div>
+
+        <div class="col-sm col-md-6 col-lg-4 align-self-center idChat" *ngIf="user$ | async as user">
+            <app-chat></app-chat>
+        </div>
+    </div>
+</div>
