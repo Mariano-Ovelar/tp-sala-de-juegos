@@ -1,0 +1,33 @@
+<header>
+    <h1>Ta Te Ti</h1>
+</header>
+
+<section id="ficha">
+    <h3>Elige ficha:</h3><a (click)="eligeFicha('X')">X</a><a (click)="eligeFicha('O')">O</a>
+</section>
+
+<section id="jugadores">
+    <div id="comp"></div>
+    <div id="hum"></div>
+</section>
+
+<section id="turno"></section>
+
+<section id="tablero">
+    <div class="celda" id="ceroCero" (click)="jugadaHumano(this, 0, 0)"></div>
+    <div class="celda" id="ceroUno" (click)="jugadaHumano(this, 0, 1)"></div>
+    <div class="celda" id="ceroDos" (click)="jugadaHumano(this, 0, 2)"></div>
+    <div class="celda" id="unoCero" (click)="jugadaHumano(this, 1, 0)"></div>
+    <div class="celda" id="unoUno" (click)="jugadaHumano(this, 1, 1)"></div>
+    <div class="celda" id="unoDos" (click)="jugadaHumano(this, 1, 2)"></div>
+    <div class="celda" id="dosCero" (click)="jugadaHumano(this, 2, 0)"></div>
+    <div class="celda" id="dosUno" (click)="jugadaHumano(this, 2, 1)"></div>
+    <div class="celda" id="dosDos" (click)="jugadaHumano(this, 2, 2)"></div>
+
+</section>
+
+<section class="marcador">
+    <section id="ganadosH"></section>
+    <section id="ganadosC"></section>
+    <section id="empate"></section>
+</section>

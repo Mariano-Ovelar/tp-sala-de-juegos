@@ -1,0 +1,63 @@
+<!-- <div class="container">
+  <div class="row">
+
+
+    <div id="jugador" class="col">
+      <h2> Tú </h2>
+      <p id="h_score">{{ victoriasUsuario }}</p>
+    </div>
+
+    <h4 class="col">Escoge tu arma</h4>
+
+    <div id="ia" class="col">
+      <h2> Niri</h2>
+      <p id="n_score">{{victoriasMaquina}}</p>
+    </div>
+
+
+  </div>
+
+  <div>
+
+    <ul id="tres_cartas">
+
+      <li class="carta piedra">
+        <div>
+          <div>
+            <label for="piedra">Piedra</label>
+            <input id="piedra" type="radio" name="escoge">
+          </div>
+        </div>
+      </li>
+
+      <li class="carta papel">
+        <div>
+          <div>
+            <label for="papel">Papel</label>
+            <input id="papel" type="radio" name="escoge">
+          </div>
+        </div>
+      </li>
+
+      <li class="carta tijeras">
+        <div>
+          <div>
+            <label for="tijeras">Tijeras</label>
+            <input id="tijeras" type="radio" name="escoge">
+          </div>
+        </div>
+      </li>
+
+    </ul>
+
+  </div>
+
+</div> -->
+
+<div id="juego">
+  <h1>Juega Contra la Maquina</h1>
+  <div (click)="usuario('0');" id="piedra"></div>
+      <div (click)="usuario('1');" id="papel"></div>
+      <div (click)="usuario('2');" id="tijera"></div>
+</div>
+<div id="efecto" style="display:none" (click)="quitarEfecto();"></div>

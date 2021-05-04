@@ -1,5 +1,16 @@
-<app-navbar></app-navbar>
+<app-navbar [usuarioNombre]="userName" [user$]="user$"></app-navbar>
 
-<router-outlet></router-outlet>
+<div class="row">
+    <div class="col-2">
 
+        <app-lista-juegos></app-lista-juegos>
+    </div>
 
+    <div class="col-7">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="col-3 chat">
+        <app-chat [usuarioNombre]="userName" [user$]="user$" *ngIf="user$ | async as user"></app-chat>
+    </div>
+
+</div>

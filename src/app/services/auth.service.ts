@@ -1,35 +1,32 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from "@angular/fire/auth";
 import { first } from "rxjs/operators";
+import { Usuario } from '../models/usuario';
 first
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   public isLogged: boolean = false;
-
-  constructor(public angularFireAuth: AngularFireAuth) {
-
+  constructor(
+    public angularFireAuth: AngularFireAuth
+    
+    ) {
+     
   }
-  async login(email: string, password: string) {
+
+  async login(usuario: Usuario) {
     try {
-      const res=await this.angularFireAuth.signInWithEmailAndPassword(email, password);
+      const res = await this.angularFireAuth.signInWithEmailAndPassword(usuario.email, usuario.password);
       return res;
     } catch (error) {
-      console.log(error); 
+      console.log(error);
       return null;
     }
-    
-    /* return .then(() => {
-      console.log("login exitoso!!!!");
-    }).catch(err => {
-      console.log(err); 
-      return null;
-    }); */
 
   }
-  async register(email: string, password: string) {
-    return await this.angularFireAuth.createUserWithEmailAndPassword(email, password).then(() => {
+  async register(usuario: Usuario) {
+    return await this.angularFireAuth.createUserWithEmailAndPassword(usuario.email, usuario.password).then(() => {
       console.log("registro exitoso!!!!");
     }).catch(err => {
       console.log(err);
@@ -43,8 +40,13 @@ export class AuthService {
     });
   }
 
-  getCurrentUser(){
+  getCurrentUser() {
     return this.angularFireAuth.authState.pipe(first()).toPromise();
 
   }
+
+  getUserAuth(){
+    return this.angularFireAuth.authState;
+  }
+  
 }

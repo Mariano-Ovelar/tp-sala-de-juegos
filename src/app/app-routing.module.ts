@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './component/home/home.component';
-import { LoginComponent } from './component/login/login.component';
-import { RegistroComponent } from './component/registro/registro.component';
-import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
-import { QuienSoyComponent } from './component/quien-soy/quien-soy.component';
+import { TaTeTiComponent } from './components/page/juegos/ta-te-ti/ta-te-ti.component';
+import { HomeComponent } from './components/page/home/home.component';
+import { LoginComponent } from './components/page/ingreso/login/login.component';
+import { RegistroComponent } from './components/page/ingreso/registro/registro.component';
+import { PageNotFoundComponent } from './components/page/page-not-found/page-not-found.component';
+import { QuienSoyComponent } from './components/quien-soy/quien-soy.component';
+import { PiedraPapelTijeraComponent } from './components/page/juegos/piedra-papel-tijera/piedra-papel-tijera.component';
 
 
 
@@ -18,6 +20,15 @@ const routes: Routes = [
       { path: '', redirectTo: 'login', pathMatch: 'full' },
     ]
   },
+  {
+    path: 'juegos',
+    children: [
+      { path: 'tateti', component: TaTeTiComponent },
+      { path: 'piedra-papel-tijeras', component: PiedraPapelTijeraComponent },
+      { path: '**', component: PageNotFoundComponent },
+    ]
+  },
+  
 
 
   { path: 'quienSoy', component: QuienSoyComponent },

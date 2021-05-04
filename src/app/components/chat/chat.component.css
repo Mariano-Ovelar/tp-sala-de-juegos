@@ -1,0 +1,199 @@
+
+ *
+ {
+     -webkit-border-radius: 0px  !important;
+     -moz-border-radius: 0px  !important;
+     border-radius: 0px !important;
+    }
+    htlm, body
+    {
+        padding: 0;
+        margin: 0;
+        position: relative;
+    }
+    .clearFix
+    {
+        clear:both;
+    }
+    .panel.panel-chat
+    {
+        bottom:0;
+        right:0;
+/*         max-width: 600px;
+ */        height: 92.4%;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+    .panel.panel-chat .panel-heading
+    {
+        background: #0d6efd;
+        border: 1px solid #2e4588;
+        color:#FFF;
+    }
+    .panel.panel-chat .panel-heading a:nth-of-type(1)
+    {
+        text-decoration: none;
+        width: 290px;
+        color:#FFF;
+        font-weight: bold;
+        float:left;
+    }
+    .panel.panel-chat .panel-heading a:nth-of-type(2)
+    {
+        text-decoration: none;
+        max-width: 11px;
+        width: 11px;
+        color:#FFF;
+        float:right;
+    }
+    .panel.panel-chat .panel-body
+    {
+        display: block;
+        padding: 0;
+        margin: 0;
+        height: 90%;
+        border-left: 1px solid #b2b2b2;
+        border-right: 1px solid #b2b2b2;
+        background-color: #0d6efd;
+        overflow: auto;
+    }
+    .panel.panel-chat .panel-body::-webkit-scrollbar {
+        display: none;
+    }
+    .panel.panel-chat .panel-body .messageMe
+    {
+        border-bottom:1px dotted #b2b2b2;
+    }
+    .panel.panel-chat .panel-body .messageMe img
+    {
+        float:left;
+        max-width: 50px;
+        max-height: 50px;
+    }
+    .panel.panel-chat .panel-body .messageMe span
+    {
+        display: block;
+        float:left;
+        padding: 5px;
+        background: #FFF;
+        min-height: 50px;
+        max-width: 280px;
+        height: 50px;
+        width: 280px;
+        word-break: break-all;
+    }
+    .panel.panel-chat .panel-body .messageHer
+    {
+        border-bottom:1px dotted #b2b2b2;
+    }
+    .panel.panel-chat .panel-body .messageHer img
+    {
+     float:right;
+     max-width: 50px;
+     max-height: 50px;
+    }
+    .panel.panel-chat .panel-body .messageHer span
+    {
+        display: block;
+        float:right;
+        padding: 5px;
+        background: #FFF;
+        min-height: 50px;
+        max-width: 280px;
+        height: 50px;
+        width: 280px;
+        word-break: break-all;
+    }
+    .panel.panel-chat .panel-footer
+    {
+        padding: 0;
+        margin: 0;
+        border: 1px solid #b2b2b2;
+        
+        background-color:white; 
+    }
+    .panel.panel-chat .panel-footer textarea
+    {
+        margin-bottom: -5px;
+        resize: none;
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    
+    .chat
+    {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .chat li
+    {
+        margin-bottom: 1px;
+        padding-bottom: 5px;
+    }
+    
+    .chat li.left .chat-body
+    {
+        margin-left: 60px;
+    }
+    
+    .chat li.right .chat-body
+    {
+        margin-right: 60px;
+    }
+    
+    
+    .chat li .chat-body p
+    {
+        margin: 0;
+        color: #777777;
+    }
+    
+    .panel .slidedown .glyphicon, .chat .glyphicon
+    {
+        margin-right: 5px;
+    }
+    
+    .panel-body
+    {
+        overflow-y: scroll;
+        height: 500px;
+    }
+    
+    ::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #F5F5F5;
+    }
+    
+    ::-webkit-scrollbar
+    {
+        width: 12px;
+        background-color: #F5F5F5;
+    }
+    
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+  .panel-body{
+      max-height: 800px;
+/*       max-width: 500px;
+ */        background-color: #0d6efd;
+      
+  }
+
+  .chatFechHora{
+    text-align: right;
+    /* vertical-align: bottom; */
+    font-size: 12px;
+  }
+  .panel-body ul{
+      width: 1000px;
+      height: 1000px;
+  }

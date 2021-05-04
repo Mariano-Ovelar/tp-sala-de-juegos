@@ -1,0 +1,27 @@
+<div>
+    <div class="panel panel-primary panel-chat">
+        <div class="panel-heading">
+            <h3>
+                Chat
+            </h3>
+        </div>
+        <div class="panel-body" >
+            <ul class="chat">
+                <li *ngFor="let mensaje of allMensaje">
+                    <div *ngIf="user$ | async as user;" [ngStyle]="{'background-color': mensaje.email==user.email ? 'lime' : 'white'}" >{{mensaje.nombre}}: {{mensaje.texto}} 
+                        <div class="chatFechHora"><!-- {{mensaje.fecha}} --> {{mensaje.hora}}   </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="panel-footer">
+            <div class="input-group">
+                <input [(ngModel)]="mensaje.texto" id="Mensaje" type="text" class="form-control input-sm"
+                    placeholder="Escribe un mensaje..." />
+                <span class="input-group-btn">
+                    <button class="btn btn-success" id="btnEnviar" (click)="enviar()">Enviar</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

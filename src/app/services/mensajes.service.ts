@@ -1,23 +1,29 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth } from "@angular/fire/auth";
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { Mensaje } from '../clases/mensaje'
+import { Mensaje } from '../models/mensaje'
 
 @Injectable({
   providedIn: 'root'
 })
 export class MensajesService {
-  private dtbase = '/usuarios';
-  mensajesRef : AngularFirestoreCollection<Mensaje>;
-  constructor(private db:AngularFirestore) { 
+  private dtbase = '/mensajes';
+  mensajesRef: AngularFirestoreCollection<Mensaje>;
+
+  constructor(private db: AngularFirestore) {
     this.mensajesRef = db.collection(this.dtbase);
   }
-  getAll():AngularFirestoreCollection<Mensaje>{
+  getAll(): AngularFirestoreCollection<Mensaje> {
     return this.mensajesRef;
   }
-  create(mensaje:Mensaje):any
-  { 
-    return this.mensajesRef.add({...mensaje});
+  create(mensaje: Mensaje): any {
+
+    if (mensaje.texto != "" && mensaje.email != "") {
+   
+      return this.mensajesRef.doc(new Date().getTime().toString()).set({ ...mensaje });
+
+    }
+
   }
-  
+
+
 }
