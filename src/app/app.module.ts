@@ -21,7 +21,7 @@ import { ChatComponent } from './components/chat/chat.component';
 import { TaTeTiComponent } from './components/page/juegos/ta-te-ti/ta-te-ti.component';
 import { PiedraPapelTijeraComponent } from './components/page/juegos/piedra-papel-tijera/piedra-papel-tijera.component';
 import { ListaJuegosComponent } from './components/lista-juegos/lista-juegos.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -47,7 +47,7 @@ import { ListaJuegosComponent } from './components/lista-juegos/lista-juegos.com
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-    
+    HttpClientModule
   ],
   providers: [AuthService,MensajesService],
   bootstrap: [AppComponent]
