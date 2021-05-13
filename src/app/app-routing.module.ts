@@ -7,6 +7,7 @@ import { RegistroComponent } from './components/page/ingreso/registro/registro.c
 import { PageNotFoundComponent } from './components/page/page-not-found/page-not-found.component';
 import { QuienSoyComponent } from './components/quien-soy/quien-soy.component';
 import { PiedraPapelTijeraComponent } from './components/page/juegos/piedra-papel-tijera/piedra-papel-tijera.component';
+import { MemotestComponent } from './components/page/juegos/memotest/memotest.component';
 
 
 
@@ -25,6 +26,8 @@ const routes: Routes = [
     children: [
       { path: 'tateti', component: TaTeTiComponent },
       { path: 'piedra-papel-tijeras', component: PiedraPapelTijeraComponent },
+      { path: 'memotes', component: MemotestComponent },
+      
       { path: '**', component: PageNotFoundComponent },
     ]
   },

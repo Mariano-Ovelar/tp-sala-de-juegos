@@ -22,6 +22,7 @@ import { TaTeTiComponent } from './components/page/juegos/ta-te-ti/ta-te-ti.comp
 import { PiedraPapelTijeraComponent } from './components/page/juegos/piedra-papel-tijera/piedra-papel-tijera.component';
 import { ListaJuegosComponent } from './components/lista-juegos/lista-juegos.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MemotestComponent } from './components/page/juegos/memotest/memotest.component';
 
 
 
@@ -37,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     ChatComponent,
     TaTeTiComponent,
     PiedraPapelTijeraComponent,
-    ListaJuegosComponent
+    ListaJuegosComponent,
+    MemotestComponent,
     
   ],
   imports: [

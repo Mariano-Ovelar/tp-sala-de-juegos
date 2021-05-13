@@ -194,6 +194,7 @@
     font-size: 12px;
   }
   .panel-body ul{
-      width: 1000px;
+      /* width: 1000px; */
       height: 1000px;
   }
+  

@@ -1,3 +1,6 @@
+
+
+
 <div>
     <div class="panel panel-primary panel-chat">
         <div class="panel-heading">
@@ -5,11 +8,17 @@
                 Chat
             </h3>
         </div>
-        <div class="panel-body" >
+        <div class="panel-body">
             <ul class="chat">
                 <li *ngFor="let mensaje of allMensaje">
-                    <div *ngIf="user$ | async as user;" [ngStyle]="{'background-color': mensaje.email==user.email ? 'lime' : 'white'}" >{{mensaje.nombre}}: {{mensaje.texto}} 
-                        <div class="chatFechHora"><!-- {{mensaje.fecha}} --> {{mensaje.hora}}   </div>
+                    <div class="row" *ngIf="user$ | async as user;"
+                        [ngStyle]="{'background-color': mensaje.email==user.email ? 'lime' : 'white'}">
+                        <div >
+                            <div class="col">{{mensaje.nombre}}: {{mensaje.texto}} </div>
+                            <div class="chatFechHora col">
+                                <!-- {{mensaje.fecha}} --> {{mensaje.hora}}
+                            </div>
+                        </div>
                     </div>
                 </li>
             </ul>
